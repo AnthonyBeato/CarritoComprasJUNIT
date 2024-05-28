@@ -1,4 +1,6 @@
-package org.example;
+package org.example.models;
+
+import org.example.validation.Validator;
 
 public class ItemCart {
     private Product product;
@@ -7,6 +9,7 @@ public class ItemCart {
     public ItemCart(Product product, int quantity) {
         this.product = product;
         this.quantity = quantity;
+        Validator.validateQuantity(quantity);
     }
 
     public Product getProduct() {

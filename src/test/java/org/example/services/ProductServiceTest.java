@@ -2,6 +2,7 @@ package org.example.services;
 
 import junit.framework.TestCase;
 import org.example.models.Product;
+import org.junit.jupiter.api.BeforeEach;
 
 
 public class ProductServiceTest extends TestCase {

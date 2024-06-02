@@ -10,10 +10,12 @@ public class CartServiceTest extends TestCase {
     private ProductService productService;
 
     //Antes de cada uno, configurar el setup
+    @BeforeEach
     public void setUp() {
         cartService = new CartServiceImpl();
         productService = new ProductServiceImpl();
     }
+
     //TODO: test Add Product To Card
     public void testAddProductToCart() {
         Product product = new Product("1", "Mouse Logitech", 60);

@@ -12,7 +12,7 @@ public class ProductServiceTest extends TestCase {
         productService = new ProductServiceImpl();
     }
 
-    //TODO: testAddProduct
+    // Test Agregar un producto
     public void testAddProduct(){
         Product product = new Product("1", "Mouse Logitech", 60);
         productService.addProduct(product);
@@ -20,7 +20,7 @@ public class ProductServiceTest extends TestCase {
     }
     
 
-    //TODO: testEliminateProduct
+    // Test Remover un producto
     public void testRemoveProduct(){
         Product product = new Product("1", "Mouse Logitech", 60);
         productService.addProduct(product);

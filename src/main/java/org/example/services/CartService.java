@@ -6,6 +6,7 @@ import org.example.models.Product;
 public interface CartService {
     void addProductToCard(Product product, int quantity);
     void eliminateProductFromCart(String productId);
+    void eliminateAllProducts();
     void modifyQuantity(String productId, int quantity);
     double calculateTotal();
     Cart getCart();

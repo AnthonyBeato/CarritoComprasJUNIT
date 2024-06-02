@@ -31,6 +31,11 @@ public class CartServiceImpl implements CartService{
     }
 
     @Override
+    public void eliminateAllProducts() {
+        cart.deleteAllProducts();
+    }
+
+    @Override
     public void modifyQuantity(String productId, int quantity) {
         Validator.validateProductID(productId);
         Validator.validateQuantity(quantity);

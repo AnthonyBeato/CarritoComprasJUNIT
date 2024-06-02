@@ -36,6 +36,11 @@ public class Cart {
         items.removeIf(item -> item.getProduct().equals(product));
     }
 
+    // Eliminar todos los productos del carrito
+    public void deleteAllProducts(){
+        items.clear();
+    }
+
     // Modificar la cantidad de product sen el carrito
     public void modifyProduct(Product product, int quantity){
         for (ItemCart item : items){

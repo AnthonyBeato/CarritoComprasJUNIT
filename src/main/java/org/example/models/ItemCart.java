@@ -9,6 +9,8 @@ public class ItemCart {
     public ItemCart(Product product, int quantity) {
         this.product = product;
         this.quantity = quantity;
+
+        // Método para validar si la cantidad está puesta correctamente
         Validator.validateQuantity(quantity);
     }
 

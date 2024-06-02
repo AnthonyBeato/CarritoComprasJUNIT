@@ -8,4 +8,5 @@ public interface CartService {
     void eliminateProductFromCart(String productId);
     void modifyQuantity(String productId, int quantity);
     double calculateTotal();
+    Cart getCart();
 }

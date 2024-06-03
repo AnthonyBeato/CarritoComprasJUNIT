@@ -9,14 +9,12 @@ public class CartServiceTest extends TestCase {
     private CartService cartService;
     private ProductService productService;
 
-    //Antes de cada uno, configurar el setup
-    @BeforeEach
     public void setUp() {
         cartService = new CartServiceImpl();
         productService = new ProductServiceImpl();
     }
 
-    //TODO: test Add Product To Card
+    // Test para añadir un producto al carrito
     public void testAddProductToCart() {
         Product product = new Product("1", "Mouse Logitech", 60);
         productService.addProduct(product);
@@ -25,6 +23,7 @@ public class CartServiceTest extends TestCase {
         assertEquals(1, cart.getItems().size());
     }
 
+    // Test para remover un producto del carrito
     public void testRemoveProductFromCart() {
         Product product = new Product("1", "Mouse Logitech", 60);
         productService.addProduct(product);
@@ -34,6 +33,7 @@ public class CartServiceTest extends TestCase {
         assertEquals(0, cart.getItems().size());
     }
 
+    // Test para modificar un producto del carrito
     public void testModifyProductFromCart() {
         Product product = new Product("1", "Mouse Logitech", 60);
         productService.addProduct(product);
@@ -44,7 +44,7 @@ public class CartServiceTest extends TestCase {
     }
 
 
-    //TODO: testCalculate Total
+    // Test para calcular el total del carrito
     public void testCalculateTotal() {
         Product product = new Product("1", "Mouse Logitech", 60);
         Product product2 = new Product("2", "Mouse Razer", 60);

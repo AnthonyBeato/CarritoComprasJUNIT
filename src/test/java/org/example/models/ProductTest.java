@@ -15,7 +15,7 @@ public class ProductTest extends TestCase {
         assertEquals(1200.0, product.getPrice());
     }
 
-    //Test editar producto
+    // Test editar producto
     public void testUpdateProduct(){
         Product product = new Product("1","Laptop Asus", 1200.0);
         product.setId("2");
@@ -26,7 +26,7 @@ public class ProductTest extends TestCase {
         assertEquals(1600.0, product.getPrice());
     }
 
-    //Test crear producto con precio negativo
+    // Test crear producto con precio negativo
     public void testCreateProductWithNegativePrice(){
         Exception exception = assertThrows(IllegalArgumentException.class, () ->
                 new Product("1","Laptop Asus", -1200.0));
